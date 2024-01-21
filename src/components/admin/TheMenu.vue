@@ -1,23 +1,29 @@
 <template>
-    <a-menu mode="inline" :items="items"></a-menu>
+    <a-menu mode="inline">
+        <router-link v-for="item in items" :key="item.key" :to="{name:`admin-`+item.key}">
+            <a-menu-item :key="item.key">
+                {{ item.label }}
+            </a-menu-item>
+        </router-link>
+    </a-menu>
 </template>
 <script setup>
     import { reactive, h } from 'vue';
     
     const items = reactive([
         {
-            key: '1',
-            label: h('a', { href: 'users' }, 'Tài khoản'),
+            key: 'users',
+            label: 'Tài khoản',
             title: 'Tài khoản',
         },
         {
-            key: '2',
-            label: h('a', { href: 'roles' }, 'Vai trò'),
+            key: 'roles',
+            label: 'Vai trò',
             title: 'Vai trò',
         },
         {
-            key: '3',
-            label: h('a', { href: 'settings' }, 'Setting'),
+            key: 'settings',
+            label: 'Setting',
             title: 'Setting',
         }
     ]);
