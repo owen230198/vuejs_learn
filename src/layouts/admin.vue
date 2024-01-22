@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-sm-3 d-none d-sm-flex">
 				<a-list bordered style="width: 100%;">
-					<Themenu/>
+					<TheMenu/>
 					<template #header>
 						<div>DASBOARD</div>
 					</template>
@@ -19,11 +19,11 @@
 </template>
 <script>
 	import TheHeader from "../components/admin/TheHeader.vue";
-	import Themenu from "../components/admin/TheMenu.vue";
+	import TheMenu from "../components/admin/TheMenu.vue";
 	export default {
 		components:{
 			TheHeader,
-			Themenu
+			TheMenu
 		}
 	}
 </script>

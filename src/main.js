@@ -6,6 +6,7 @@ import {
     Menu,
     message 
 } from 'ant-design-vue';
+import { createPinia } from 'pinia';
 import router from './router/index.js'
 import App from './App.vue'
 
@@ -19,5 +20,6 @@ app.use(Button);
 app.use(Drawer);
 app.use(List);
 app.use(Menu);
+app.use(createPinia());
 app.mount('#app');
 app.config.globalProperties.$message = message;

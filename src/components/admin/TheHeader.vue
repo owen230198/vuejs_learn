@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluild">
         <div class="row text-white" style="background-color: #0c713d; padding: 1rem;">
-            <div class="col-1 d-flex d-sm-none align-items-center justify-content-center">
+            <div class="col-1 d-flex align-items-center justify-content-center">
                 <span @click="showDasboardMenu()">X</span>
             </div>
 
@@ -20,9 +20,7 @@
         </div>
     </div>
     <a-drawer v-model:open="open_dasboard" title="DASBOARD" placement="left">
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <TheMenu/>
     </a-drawer>
     <a-drawer v-model:open="open_user" title="TÀI KHOẢN" placement="right">
         <p>Some contents...</p>
@@ -41,4 +39,13 @@
     const showUserMenu = () => {
         open_user.value = true;
     };
+</script>
+
+<script>
+    import TheMenu from "@/components/admin/TheMenu.vue";
+    export default {
+        components: {
+            TheMenu,
+        }
+    }
 </script>

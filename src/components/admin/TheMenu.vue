@@ -1,28 +1,45 @@
 <template>
-    <a-menu mode="inline">
-        <router-link v-for="item in items" :key="item.key" :to="{name:`admin-`+item.key}">
+    <a-menu 
+        v-model:openKeys="openKeys"
+        v-model:selectedKeys="selectedKeys"
+        mode="inline">
+        <router-link v-for="item in items" :key="item.key" :to="{name:item.key}">
             <a-menu-item :key="item.key">
                 {{ item.label }}
             </a-menu-item>
         </router-link>
     </a-menu>
 </template>
+<script>
+    import { defineComponent } from 'vue';
+    import { storeToRefs } from 'pinia';
+    import { menuStore } from "@/stores/admin/menu.js";
+    console.log(menuStore);
+    export default defineComponent({
+        setup(){
+            const store = menuStore();
+            return {
+                ...storeToRefs(store)
+            };
+        }
+    })
+</script>
 <script setup>
-    import { reactive, h } from 'vue';
+    import { reactive } from 'vue';
     
     const items = reactive([
         {
-            key: 'users',
+            key: 'admin-users',
             label: 'Tài khoản',
             title: 'Tài khoản',
         },
         {
-            key: 'roles',
+            key: 'admin-roles',
             label: 'Vai trò',
             title: 'Vai trò',
         },
         {
-            key: 'settings',
+            key: 'admin-settings',
             label: 'Setting',
             title: 'Setting',
         }
