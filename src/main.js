@@ -6,6 +6,10 @@ const app = createApp(App);
 import router from './router/index.js';
 app.use(router);
 
+//axios
+import axios from 'axios';
+window.axios = axios;
+
 //ant design vuejs
 import { 
     Button,
