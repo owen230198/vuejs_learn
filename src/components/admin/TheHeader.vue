@@ -1,8 +1,8 @@
 <template>
-    <div class="container-fluild">
+    <div class="container-fluid">
         <div class="row text-white" style="background-color: #0c713d; padding: 1rem;">
-            <div class="col-1 d-flex align-items-center justify-content-center">
-                <span @click="showDasboardMenu()">X</span>
+            <div class="col-1 d-flex d-sm-none align-items-center justify-content-center">
+                <span @click="showDasboardMenu()"><font-awesome-icon :icon="['fas', 'bars']" /></span>
             </div>
 
             <div class="col-10 col-sm-3 d-flex align-items-center justify-content-center justify-content-sm-start">
