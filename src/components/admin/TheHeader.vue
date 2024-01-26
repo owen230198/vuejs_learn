@@ -30,6 +30,7 @@
 </template>
 <script setup>
     import { ref } from 'vue';
+    import TheMenu from "@/components/admin/TheMenu.vue";
     const open_dasboard = ref(false);
     const showDasboardMenu = () => {
         open_dasboard.value = true;
@@ -39,13 +40,4 @@
     const showUserMenu = () => {
         open_user.value = true;
     };
-</script>
-
-<script>
-    import TheMenu from "@/components/admin/TheMenu.vue";
-    export default {
-        components: {
-            TheMenu,
-        }
-    }
 </script>
