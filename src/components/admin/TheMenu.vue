@@ -13,22 +13,12 @@
         </a-menu>
     </div>
 </template>
-<script>
-    import { defineComponent } from 'vue';
-    import { storeToRefs } from 'pinia';
-    import { menuStore } from "@/stores/admin/menu.js";
-    export default defineComponent({
-        setup(){
-            const store = menuStore();
-            return {
-                ...storeToRefs(store)
-            };
-        }
-    })
-</script>
 <script setup>
     import { reactive } from 'vue';
-    
+    import { storeToRefs } from 'pinia';
+    import { menuStore } from "@/stores/admin/menu.js";
+    const store = menuStore();
+    storeToRefs(store);
     const items = reactive([
         {
             key: 'admin-users',
