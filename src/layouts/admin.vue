@@ -11,7 +11,6 @@
 				</a-list>
 			</div>
 			<div class="col-sm-9 col-12">
-				content
 				<router-view></router-view>
 			</div>
 		</div>

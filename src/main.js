@@ -16,12 +16,16 @@ import {
     Drawer,
     List,
     Menu,
+    Card,
+    Table,
     message 
 } from 'ant-design-vue';
 app.use(Button);
 app.use(Drawer);
 app.use(List);
 app.use(Menu);
+app.use(Card);
+app.use(Table);
 app.config.globalProperties.$message = message;
 
 //pinia
