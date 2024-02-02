@@ -14,11 +14,11 @@
     </div>
 </template>
 <script setup>
-    import { reactive } from 'vue';
-    import { storeToRefs } from 'pinia';
-    import { menuStore } from "@/stores/admin/menu.js";
-    const store = menuStore();
-    storeToRefs(store);
+    import { reactive } from 'vue'
+    import { storeToRefs } from 'pinia'
+    import { menuStore } from "@/stores/admin/menu.js"
+    const store = menuStore()
+    storeToRefs(store)
     const items = reactive([
         {
             key: 'admin-users',
@@ -38,5 +38,5 @@
             title: 'Setting',
             icon: 'gear'
         }
-    ]);
+    ])
 </script>

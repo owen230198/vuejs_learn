@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia';
+import { defineStore } from 'pinia'
 export const menuStore = defineStore('menuId', {
     state: () => ({
         selectedKeys: [],
@@ -6,10 +6,10 @@ export const menuStore = defineStore('menuId', {
     }),
     actions: {
         onSelectedKeys(data) {
-            this.selectedKeys = data;
+            this.selectedKeys = data
         },
         doOpenKeys(data) {
-            this.openKeys = data;
+            this.openKeys = data
         }
     }
-});
+})

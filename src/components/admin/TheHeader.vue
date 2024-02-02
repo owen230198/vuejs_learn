@@ -29,15 +29,15 @@
     </a-drawer>
 </template>
 <script setup>
-    import { ref } from 'vue';
-    import TheMenu from "@/components/admin/TheMenu.vue";
-    const open_dasboard = ref(false);
+    import { ref } from 'vue'
+    import TheMenu from "@/components/admin/TheMenu.vue"
+    const open_dasboard = ref(false)
     const showDasboardMenu = () => {
-        open_dasboard.value = true;
-    };
+        open_dasboard.value = true
+    }
 
-    const open_user = ref(false);
+    const open_user = ref(false)
     const showUserMenu = () => {
-        open_user.value = true;
-    };
+        open_user.value = true
+    }
 </script>

@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router";
-import admin from "./admin.js";
+import { createRouter, createWebHistory } from "vue-router"
+import admin from "./admin.js"
 const routes = [...admin];
 
 const router = createRouter({
